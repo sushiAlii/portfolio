@@ -10,47 +10,51 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import inventory from "../assets/blackscoop.png";
+import { ProjectContent } from "./ProjectContent";
 
 export const MainContent = () => {
   const projects = [
     {
-      name: "Inventory Management",
+      name: "Black Scoop Saguiran Inventory Management App",
       src: "assets/blackscoop.png",
+      align: "start",
+      description: "Gi",
+      descriptionAlign: "end",
     },
     {
       name: "Sushi Wave",
       src: "assets/sushi-wave.png",
+      align: "end",
+      description: "",
+      descriptionAlign: "start",
     },
     {
       name: "Axiefy",
       src: "assets/axiefy.png",
+      align: "start",
+      description: "",
+      descriptionAlign: "end",
+    },
+    {
+      name: "PSD Tracking (Document Tracking System)",
+      src: "assets/document-tracking.png",
+      align: "end",
+      description: "",
+      descriptionAlign: "start",
     },
   ];
   return (
     <>
-      <Center mt={10}>
+      <Center pt={12}>
         <div>
           <Text fontSize="4xl" align="center">
             Projects
           </Text>
 
-          <Wrap mt={10} maxW="5xl" justify="center">
+          <Wrap pt={6} maxW="5xl" justify="center">
             {projects.map((project, index) => {
               return (
-                <WrapItem key={index}>
-                  <Box mt={5} outlineColor="whiteAlpha.100">
-                    <Flex>
-                      <Img
-                        m={10}
-                        borderRadius="lg"
-                        boxShadow="dark-lg"
-                        src={project.src}
-                        alt={project.name}
-                        maxW={400}
-                      />
-                    </Flex>
-                  </Box>
-                </WrapItem>
+                <ProjectContent key={index} project={project} index={index} />
               );
             })}
           </Wrap>
