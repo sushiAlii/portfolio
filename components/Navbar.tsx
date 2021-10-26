@@ -14,7 +14,7 @@ export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box px={{ base: "4", md: "8" }} mt={10}>
+    <Box px={{ base: "4", md: "8" }} pt={10}>
       <Flex
         h={20}
         alignItems={"center"}
@@ -23,7 +23,7 @@ export const Navbar = () => {
         maxW="5xl"
       >
         <Link href="/" style={{ textDecoration: "none" }}>
-          <Text fontSize="5xl">SushiAlii</Text>
+          <Text fontSize="3xl">SushiAlii</Text>
         </Link>
 
         <Flex alignItems={"center"}>
