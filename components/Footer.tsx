@@ -14,8 +14,8 @@ export const Footer = (props: ButtonGroupProps) => (
     <Box mx="auto" maxW="7xl">
       <Stack>
         <Center>
-          <Text as="kbd" color="gray.400">
-            Made by SushiAlii 🍣
+          <Text as="kbd" fontSize="sm" color="gray.400">
+            Designed & Built by Ali Asgar Laut 🍣
           </Text>
         </Center>
 
