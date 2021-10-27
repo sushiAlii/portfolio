@@ -16,14 +16,16 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
+      <div id="projects">
         <Navbar />
         <MainContent />
       </div>
-      <div className="full-height">
+      <div id="about" className="full-height">
         <AboutContent />
       </div>
-      <ContactMe />
+      <div id="contact">
+        <ContactMe />
+      </div>
       <Footer />
     </div>
   );
