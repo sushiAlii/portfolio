@@ -1,7 +1,12 @@
 import { Box, Stack, Text, Center } from "@chakra-ui/react";
 import * as React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { ButtonGroup, ButtonGroupProps, IconButton } from "@chakra-ui/react";
+import {
+  ButtonGroup,
+  ButtonGroupProps,
+  IconButton,
+  Link,
+} from "@chakra-ui/react";
 
 export const Footer = (props: ButtonGroupProps) => (
   <Box
@@ -22,24 +27,27 @@ export const Footer = (props: ButtonGroupProps) => (
         <Center>
           <Stack align="center">
             <ButtonGroup variant="ghost" color="gray.400" {...props}>
-              <IconButton
-                as="a"
+              <Link
                 href="https://www.linkedin.com/in/ali-laut-224496205/"
-                aria-label="LinkedIn"
-                icon={<FaLinkedin fontSize="20px" />}
-              />
-              <IconButton
-                as="a"
-                href="https://github.com/sushiAlii"
-                aria-label="GitHub"
-                icon={<FaGithub fontSize="20px" />}
-              />
-              <IconButton
-                as="a"
-                href="https://twitter.com/AliiiLucmanLaut"
-                aria-label="Twitter"
-                icon={<FaTwitter fontSize="20px" />}
-              />
+                isExternal
+              >
+                <IconButton
+                  aria-label="LinkedIn"
+                  icon={<FaLinkedin fontSize="20px" />}
+                />
+              </Link>
+              <Link href="https://github.com/sushiAlii" isExternal>
+                <IconButton
+                  aria-label="GitHub"
+                  icon={<FaGithub fontSize="20px" />}
+                />
+              </Link>
+              <Link href="https://twitter.com/AliiiLucmanLaut" isExternal>
+                <IconButton
+                  aria-label="Twitter"
+                  icon={<FaTwitter fontSize="20px" />}
+                />
+              </Link>
             </ButtonGroup>
           </Stack>
         </Center>
