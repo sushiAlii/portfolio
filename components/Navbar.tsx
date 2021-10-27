@@ -23,16 +23,18 @@ export const Navbar = () => {
         maxW="5xl"
       >
         <Link href="/" style={{ textDecoration: "none" }}>
-          <Text fontSize="3xl">SushiAlii</Text>
+          <Text fontSize="3xl" color="gray.500">
+            SushiAlii
+          </Text>
         </Link>
 
         <Flex alignItems={"center"}>
           <Stack direction={"row"} spacing={7}>
             <Link href="/" style={{ textDecoration: "none" }}>
-              <Text>Projects</Text>
+              <Text color="gray.500">Projects</Text>
             </Link>
             <Link href="/about" style={{ textDecoration: "none" }}>
-              <Text>About Me</Text>
+              <Text color="gray.500">About Me</Text>
             </Link>
           </Stack>
         </Flex>
