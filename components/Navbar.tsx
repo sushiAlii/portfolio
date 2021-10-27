@@ -30,11 +30,14 @@ export const Navbar = () => {
 
         <Flex alignItems={"center"}>
           <Stack direction={"row"} spacing={7}>
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link href="#projects" style={{ textDecoration: "none" }}>
               <Text color="gray.500">Projects</Text>
             </Link>
-            <Link href="/about" style={{ textDecoration: "none" }}>
-              <Text color="gray.500">About Me</Text>
+            <Link href="#about" style={{ textDecoration: "none" }}>
+              <Text color="gray.500">About</Text>
+            </Link>
+            <Link href="#contact" style={{ textDecoration: "none" }}>
+              <Text color="gray.500">Contact</Text>
             </Link>
           </Stack>
         </Flex>
