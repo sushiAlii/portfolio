@@ -25,7 +25,7 @@ export const AboutContent = () => {
       "My passion in programming started in college during data structure class. " +
       "I then majored in Database Systems where it gave me proficiency in SQL and handling different kinds of DBMS. " +
       "It is around that time where I started building systems and applications. Which prompted me in learning Javascript and PHP Frameworks like Vue, React, Laravel, etc. " +
-      "I am also interested and have been learning Web3 techs like Solidity.",
+      "I am also interested and have been learning Web3 techs like Solidity, and my photo over here is the only decent one I have. :)",
     languages: "Python SQL Java Dart Javascript Typescript Solidity",
     frameworks: "React Vue Flutter Laravel",
     tools: "Apache Nginx Hardhat Supabase",
