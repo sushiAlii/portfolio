@@ -44,7 +44,33 @@ export const AboutContent = () => {
             <WrapItem>
               <Flex align="start">
                 <Text align="start" color="gray.500" mr={10}>
-                  <Text>{me.aboutMe}</Text>
+                  <Text>
+                    <Text as="span" color="gray.400">
+                      Hi! I`m Ali! a freelance software engineer
+                    </Text>{" "}
+                    based in the Philippines. My passion in programming started
+                    in college during data structure class. I then majored in{" "}
+                    <Text as="span" color="gray.400">
+                      Database Systems
+                    </Text>{" "}
+                    where it gave me proficiency in SQL and handling different
+                    kinds of DBMS. It is around that time where I started
+                    building systems and applications. Which prompted me in
+                    learning{" "}
+                    <Text as="span" color="gray.400">
+                      Javascript and PHP Frameworks like Vue, React, Laravel
+                    </Text>
+                    {", "}
+                    etc. I am also interested and have been learning{" "}
+                    <Text as="span" color="gray.400">
+                      Web3
+                    </Text>{" "}
+                    techs like{" "}
+                    <Text as="span" color="gray.400">
+                      Solidity
+                    </Text>
+                    , and my photo over here is the only decent one I have. :)
+                  </Text>
                   <Text my={2} color="gray.500">
                     Here are some of the techs I have been using:
                   </Text>
