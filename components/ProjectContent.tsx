@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Flex,
-  Center,
-  Text,
-  Stack,
-  Box,
-  Wrap,
-  Img,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Flex, Text, Link, Box, Wrap, Img, WrapItem } from "@chakra-ui/react";
 
 interface Props {
   index: number;
@@ -19,6 +10,7 @@ interface Props {
     description: string;
     descriptionAlign: string;
     tools: string;
+    link: string;
   };
 }
 
@@ -28,14 +20,16 @@ export const ProjectContent: React.FC<Props> = ({ index, project }) => {
       <WrapItem key={index}>
         <Box mt={5} width={1000}>
           <Flex justify={project.align}>
-            <Img
-              m={10}
-              borderRadius="md"
-              boxShadow="dark-lg"
-              src={project.src}
-              alt={project.name}
-              maxW={550}
-            />
+            <Link href={project.link} isExternal>
+              <Img
+                m={10}
+                borderRadius="md"
+                boxShadow="dark-lg"
+                src={project.src}
+                alt={project.name}
+                maxW={550}
+              />
+            </Link>
 
             <Flex justify={project.descriptionAlign} w="100%" align="center">
               <Wrap m={10}>
@@ -82,14 +76,16 @@ export const ProjectContent: React.FC<Props> = ({ index, project }) => {
               </Text>
             </Wrap>
           </Flex>
-          <Img
-            m={10}
-            borderRadius="md"
-            boxShadow="dark-lg"
-            src={project.src}
-            alt={project.name}
-            maxW={550}
-          />
+          <Link href={project.link} isExternal>
+            <Img
+              m={10}
+              borderRadius="md"
+              boxShadow="dark-lg"
+              src={project.src}
+              alt={project.name}
+              maxW={550}
+            />
+          </Link>
         </Flex>
       </Box>
     </WrapItem>
