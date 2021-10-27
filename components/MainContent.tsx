@@ -22,6 +22,7 @@ export const MainContent = () => {
         "This is my first project as a freelance software engineer. Manage, manipulate, oversee your inventory, and see what's left and used.",
       descriptionAlign: "end",
       tools: "Vue  Vuetify  PostgreSQL  Supabase",
+      link: "https://www.blackscoopalssaguiaran.com",
     },
     {
       name: "Sushi Wave",
@@ -31,6 +32,7 @@ export const MainContent = () => {
         "A personal project created in culmination of learning solidity. Wave portal grants user to wave using ETH in Rinkeby Test Net",
       descriptionAlign: "start",
       tools: "Solidity React Chakra UI Hardhat",
+      link: "https://sushi-wave.vercel.app/",
     },
     {
       name: "Axiefy",
@@ -40,6 +42,7 @@ export const MainContent = () => {
         "Created in collaboration with @carlomigueldy, for Supabase Hackathon held at October 2021. Axiefy is an app for Axie Infinity Managers/Players which could help them monitor their SLPs",
       descriptionAlign: "end",
       tools: "Nuxt Vue Vuetify PostgreSQL Supabase",
+      link: "https://axiefy.vercel.app/",
     },
     {
       name: "PSD Tracking ",
@@ -49,6 +52,7 @@ export const MainContent = () => {
         "Started as my undergraduate CAPSTONE project, PSD Tracking System aims to help ease the workload of Procurement and Supply Department of MSU-IIT from recording the whereabouts of the documents.",
       descriptionAlign: "start",
       tools: "Vue Vuetify PostgreSQL Laravel",
+      link: "https://psd-tracking.herokuapp.com/",
     },
   ];
   return (
