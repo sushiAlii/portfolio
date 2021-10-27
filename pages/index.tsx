@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AboutContent } from "../components/AboutContent";
+import { ContactMe } from "../components/ContactMe";
 import { Footer } from "../components/Footer";
 import { MainContent } from "../components/MainContent";
 import { Navbar } from "../components/Navbar";
@@ -21,8 +22,9 @@ const Home: NextPage = () => {
       </div>
       <div className="full-height">
         <AboutContent />
-        <Footer />
       </div>
+      <ContactMe />
+      <Footer />
     </div>
   );
 };
