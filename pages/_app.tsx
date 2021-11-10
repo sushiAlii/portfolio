@@ -5,7 +5,7 @@ import { ChakraProvider, Box } from "@chakra-ui/react";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <Box backgroundImage="url(/assets/background.svg)">
+      <Box>
         <Box>
           <Component {...pageProps} />;
         </Box>
