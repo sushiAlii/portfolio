@@ -11,7 +11,13 @@ import {
   CardMedia,
   CardActions,
 } from "@mui/material";
-import { GitHub, Launch, Visibility, VisibilityOff } from "@mui/icons-material";
+import {
+  GitHub,
+  Launch,
+  Visibility,
+  VisibilityOff,
+  Code,
+} from "@mui/icons-material";
 import { Project } from "@/constants/projects";
 
 interface ProjectCardProps {
@@ -80,19 +86,50 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     >
       {/* Project Image */}
       <Box sx={{ position: "relative", overflow: "hidden" }}>
-        <CardMedia
-          component="img"
-          height="200"
-          image={project.image}
-          alt={project.name}
-          sx={{
-            transition: "transform 0.3s ease",
-            "&:hover": {
-              transform: "scale(1.05)",
-            },
-          }}
-        />
-        {/* Category Badge */}
+        {project.image ? (
+          <CardMedia
+            component="img"
+            height="200"
+            image={project.image}
+            alt={project.name}
+            sx={{
+              transition: "transform 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+            }}
+          />
+        ) : (
+          <Box
+            sx={{
+              height: 200,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#f5f5f5",
+              borderBottom: "1px solid #e0e0e0",
+            }}
+          >
+            <Code
+              sx={{
+                fontSize: 48,
+                color: "#666",
+                mb: 1,
+              }}
+            />
+            <Typography
+              variant="body2"
+              sx={{
+                color: "#666",
+                fontWeight: 500,
+                textAlign: "center",
+              }}
+            >
+              {project.category} Project
+            </Typography>
+          </Box>
+        )}
         <Chip
           label={project.category}
           size="small"
@@ -108,22 +145,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             },
           }}
         />
-        {/* Featured Badge */}
-        {project.featured && (
-          <Chip
-            label="Featured"
-            size="small"
-            sx={{
-              position: "absolute",
-              top: 12,
-              left: 12,
-              backgroundColor: "#1976d2",
-              color: "white",
-              fontWeight: 600,
-              fontSize: "0.75rem",
-            }}
-          />
-        )}
       </Box>
 
       <CardContent sx={{ flexGrow: 1, p: 3 }}>
@@ -141,7 +162,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {project.name}
         </Typography>
 
-        {/* Project Description */}
         <Typography
           variant="body2"
           color="text.secondary"
@@ -156,7 +176,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             : truncateDescription(project.description)}
         </Typography>
 
-        {/* Show More/Less Button */}
         {project.description.length > 120 && (
           <Button
             size="small"
@@ -175,7 +194,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </Button>
         )}
 
-        {/* Technologies */}
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mb: 2 }}>
           {project.technologies.map((tech, index) => (
             <Chip
@@ -198,7 +216,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </Box>
       </CardContent>
 
-      {/* Action Buttons */}
       <CardActions sx={{ p: 3, pt: 0, gap: 1 }}>
         <Button
           variant="outlined"
@@ -238,7 +255,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               },
             }}
           >
-            Live Demo
+            Visit
           </Button>
         )}
       </CardActions>
