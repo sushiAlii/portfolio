@@ -5,6 +5,7 @@ import ExperienceCard from "./ExperienceCard";
 const ExperienceSection: React.FC = () => {
   return (
     <Stack
+      id="experiences"
       minHeight="100vh"
       justifyContent="center"
       alignItems="center"

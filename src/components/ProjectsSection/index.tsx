@@ -9,6 +9,7 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <Stack
+      id="projects"
       minHeight="100vh"
       justifyContent="center"
       alignItems="center"

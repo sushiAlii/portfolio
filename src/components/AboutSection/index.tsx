@@ -64,6 +64,7 @@ const AboutSection: React.FC = () => {
 
   return (
     <Stack
+      id="about"
       minHeight="100vh"
       justifyContent="center"
       alignItems="center"

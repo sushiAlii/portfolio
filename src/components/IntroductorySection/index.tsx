@@ -1,8 +1,9 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 const IntroductorySection: React.FC = () => {
   return (
     <Stack
+      id="intro"
       minHeight="100vh"
       justifyContent="center"
       alignItems="center"
@@ -19,20 +20,6 @@ const IntroductorySection: React.FC = () => {
         I create beautiful, functional web experiences with modern technologies.
         Passionate about clean code and thoughtful design.
       </Typography>
-
-      <Stack
-        direction="row"
-        spacing={2}
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Button variant="contained" size="large">
-          View My Work
-        </Button>
-        <Button variant="outlined" size="large">
-          Get In Touch
-        </Button>
-      </Stack>
     </Stack>
   );
 };
