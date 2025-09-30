@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import ThemeProvider from "@/theme/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "My personal portfolio built with Next.js and Material-UI",
+  title: "Ali Asgar Laut",
+  description: "My personal website built with Next.js and Material-UI",
 };
 
 export default function RootLayout({
