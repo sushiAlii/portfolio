@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
   {
     company: "Rakuten Travel Xchange",
     logo: "/experiences/rakuten-travel-xchange.jpg",
-    position: "Frontend Engineer",
+    position: "Full Stack Developer",
     tenure: "Dec 2021 - Nov 2024",
     description:
       "Worked across various travel booking applications, ensuring a seamless user experience by building responsive UI components, optimizing for SEO, and enhancing performance. Developed fully tested RESTful APIs for backend services.",
