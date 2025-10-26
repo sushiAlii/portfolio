@@ -11,7 +11,7 @@ export const experiences: Experience[] = [
   {
     company: "Alt Research Ltd.",
     logo: "/experiences/alt-research.jpg",
-    position: "Full-Stack Developer",
+    position: "Full Stack Developer",
     tenure: "Nov 2024 - Sep 2025",
     description:
       "Managed and maintained various web3 projects especially their rollup wizard application which is used by their clients to create and manage their own rollups. One of the pioneering team in building Rumour, a decentralized social cryptotrading platform for web3.",
