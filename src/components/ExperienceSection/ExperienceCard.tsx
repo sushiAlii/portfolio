@@ -12,9 +12,15 @@ import {
   Stack,
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
+import {
+  Company,
+  COMPANY_LINKS,
+  technologiesLinks,
+  Technology,
+} from "@/constants/experiences";
 
 interface ExperienceCardProps {
-  company: string;
+  company: Company;
   logo?: string;
   position: string;
   tenure: string;
@@ -44,7 +50,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
       {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
-      }
+      },
     );
 
     const currentRef = cardRef.current;
@@ -99,6 +105,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
                 color: "#666",
                 fontSize: "1.2rem",
                 fontWeight: 600,
+                borderRadius: "0.75rem",
               }}
             >
               {!logo && company.charAt(0).toUpperCase()}
@@ -109,7 +116,18 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
                 {position}
               </Typography>
 
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                component="a"
+                target="_blank"
+                href={COMPANY_LINKS[company]}
+                variant="body2"
+                color="text.secondary"
+                rel="noopener noreferrer"
+                sx={{
+                  textDecoration: "none",
+                  "&:hover": { textDecoration: "underline" },
+                }}
+              >
                 {company}
               </Typography>
             </Stack>
@@ -135,22 +153,32 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             <Typography variant="body1">{description}</Typography>
             {technologies.length > 0 && (
               <Stack direction="row" spacing={1} flexWrap="wrap">
-                {technologies.map((tech, index) => (
-                  <Chip
-                    key={index}
-                    label={tech}
-                    size="small"
-                    variant="outlined"
-                    sx={{
-                      borderColor: "#e0e0e0",
-                      color: "#666",
-                      "&:hover": {
-                        borderColor: "#000",
-                        color: "#000",
-                      },
-                    }}
-                  />
-                ))}
+                {technologies.map((tech, index) => {
+                  const href =
+                    tech in technologiesLinks
+                      ? technologiesLinks[tech as Technology]
+                      : undefined;
+                  return (
+                    <Chip
+                      component="a"
+                      label={tech}
+                      size="small"
+                      variant="outlined"
+                      href={href}
+                      key={index}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        borderColor: "#e0e0e0",
+                        color: "#666",
+                        "&:hover": {
+                          borderColor: "#000",
+                          color: "#000",
+                        },
+                      }}
+                    />
+                  );
+                })}
               </Stack>
             )}
           </Stack>
