@@ -3,7 +3,7 @@ import ThemeProvider from "@/theme/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Ali Asgar Laut",
-  description: "My personal website built with Next.js and Material-UI",
+  description: "Senior Software Engineer",
 };
 
 export default function RootLayout({
