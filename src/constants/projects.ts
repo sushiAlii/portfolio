@@ -15,7 +15,7 @@ export const projects: Project[] = [
     id: 1,
     name: "Torogan",
     description:
-      "An app that bridges people that are searching for a new home with property owners.",
+      "A rental-listing platform for the Philippines — browse verified rentals and connect directly with landlords, no middlemen.",
     githubLink: "https://github.com/sushiAlii/torogan-fe",
     liveLink: "https://www.torogan.com",
     image: "/torogan.png",
@@ -25,6 +25,30 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    name: "sushi-commit-js",
+    description:
+      "A blazingly fast, zero-overhead, AI-powered CLI utility that inspects your local git diff alterations and automatically crafts precise, structured Conventional Commits. Powered by the lightning-fast efficiency of Bun and Claude Haiku.",
+    githubLink: "https://github.com/sushiAlii/sushi-commit-js",
+    liveLink: "",
+    image: "",
+    technologies: ["Typescript"],
+    category: "CLI",
+    featured: false,
+  },
+  {
+    id: 3,
+    name: "Salsila",
+    description:
+      "Salsila derived from Arabic term 'سلسلة' which means chain, link, or connection. It is a web application that allows users to build and connect geneological trees. Currently, frontend is still pending to be implemented.",
+    githubLink: "https://github.com/sushiAlii/salsila-backend",
+    liveLink: "",
+    image: "",
+    technologies: ["Golang", "PostgreSQL"],
+    category: "Backend",
+    featured: false,
+  },
+  {
+    id: 4,
     name: "Blackscoop Inventory Management System",
     description:
       "A web application for managing inventory for Blackscoop (Saguiaran branch). It allows the users to view the inventory, add items, and update items.",
@@ -36,7 +60,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 3,
+    id: 5,
     name: "Axiefy",
     description:
       "A hackathon project from Supabase, in collaboration with my friend, Carlo. It is a web application that allows Axie Infinity managers to manage their scholars' earnings.",
@@ -49,19 +73,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 4,
-    name: "Salsila",
-    description:
-      "Salsila derived from Arabic term 'سلسلة' which means chain, link, or connection. It is a web application that allows users to build and connect geneological trees. Currently, frontend is still pending to be implemented.",
-    githubLink: "https://github.com/sushiAlii/salsila-backend",
-    liveLink: "",
-    image: "",
-    technologies: ["Golang", "PostgreSQL"],
-    category: "Backend",
-    featured: false,
-  },
-  {
-    id: 5,
+    id: 6,
     name: "Wave Portal",
     description:
       "A simple project creating and implementing a wave smart contract inside Rinkeby Testnet. Users can also leave a small message upon triggering wave.",
