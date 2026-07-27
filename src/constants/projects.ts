@@ -13,6 +13,18 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    name: "Torogan",
+    description:
+      "An app that bridges people that are searching for a new home with property owners.",
+    githubLink: "https://github.com/sushiAlii/torogan-fe",
+    liveLink: "https://www.torogan.com",
+    image: "/torogan.png",
+    technologies: ["Next.js", "Go", "Gin", "PostgreSQL", "AWS"],
+    category: "Full Stack",
+    featured: true,
+  },
+  {
+    id: 2,
     name: "Blackscoop Inventory Management System",
     description:
       "A web application for managing inventory for Blackscoop (Saguiaran branch). It allows the users to view the inventory, add items, and update items.",
@@ -24,7 +36,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     name: "Axiefy",
     description:
       "A hackathon project from Supabase, in collaboration with my friend, Carlo. It is a web application that allows Axie Infinity managers to manage their scholars' earnings.",
@@ -37,7 +49,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 3,
+    id: 4,
     name: "Salsila",
     description:
       "Salsila derived from Arabic term 'سلسلة' which means chain, link, or connection. It is a web application that allows users to build and connect geneological trees. Currently, frontend is still pending to be implemented.",
@@ -49,7 +61,7 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    id: 4,
+    id: 5,
     name: "Wave Portal",
     description:
       "A simple project creating and implementing a wave smart contract inside Rinkeby Testnet. Users can also leave a small message upon triggering wave.",
