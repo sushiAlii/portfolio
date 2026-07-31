@@ -1,0 +1,173 @@
+/* Local copies: CSS Modules scopes/hashes animation-name references inside
+   this file, so the globals.css versions wouldn't resolve here. */
+@keyframes belt {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2.5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2.5deg);
+  }
+}
+
+.wrap {
+  position: relative;
+  height: 300px;
+  margin-top: 26px;
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    height: 270px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    height: 250px;
+  }
+}
+
+.rail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 78px;
+  height: 14px;
+  background: linear-gradient(180deg, var(--pg-belt1), var(--pg-belt2));
+  transition: background 0.5s ease;
+}
+
+.base {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 78px;
+  background: linear-gradient(180deg, var(--pg-belt2), color-mix(in srgb, var(--pg-belt2) 70%, var(--pg-bg)));
+  transition: background 0.5s ease;
+}
+
+.track {
+  position: absolute;
+  left: 0;
+  bottom: 92px;
+  display: flex;
+  gap: 26px;
+  width: max-content;
+  animation: belt 62s linear infinite;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+.trackGroup {
+  display: flex;
+  gap: 26px;
+  align-items: flex-end;
+}
+
+.trackGroupFirst {
+  padding-left: var(--section-pad-x);
+}
+
+.plate {
+  display: block;
+  background: var(--pg-card);
+  border: 1px solid var(--pg-line);
+  border-radius: var(--radius-plate);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-plate-rest);
+  transition: transform 0.4s var(--ease-standard), box-shadow 0.4s;
+  color: inherit;
+}
+
+.plate:hover {
+  transform: translateY(-10px) rotate(-0.6deg);
+  box-shadow: var(--shadow-plate-hover);
+}
+
+@media (max-width: 640px) {
+  .plate {
+    width: 250px !important;
+  }
+}
+
+.plateHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plateCategory {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pg-faint);
+}
+
+.platePill {
+  width: 22px;
+  height: 7px;
+  border-radius: var(--radius-pill);
+}
+
+.plateTitle {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  margin-top: 8px;
+}
+
+.plateDesc {
+  font-size: 13.5px;
+  color: var(--pg-soft);
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.plateTags {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.maki {
+  position: absolute;
+  right: clamp(20px, 6vw, 90px);
+  bottom: 20px;
+  width: 52px;
+  animation: bob 7s ease-in-out 1s infinite;
+}
+
+.chopsticksWrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.25s;
+  will-change: transform;
+}
+
+.stick {
+  position: absolute;
+  width: 5px;
+  height: 120px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #8c491a, #c98a55);
+  transform-origin: 50% 100%;
+  left: -3px;
+  top: -120px;
+  transition: transform 0.18s var(--ease-standard);
+}

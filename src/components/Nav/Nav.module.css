@@ -1,0 +1,134 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--section-pad-x);
+  background: var(--pg-glass);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--pg-line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 19px;
+  color: var(--pg-ink);
+}
+
+.brandMark {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  background: var(--pg-nori);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.brandMarkInner {
+  width: 13px;
+  height: 13px;
+  border-radius: var(--radius-pill);
+  background: var(--pg-rice);
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 32px);
+}
+
+.navLink {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pg-faint);
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: var(--pg-ink);
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -6px;
+  height: 1.5px;
+  background: var(--pg-salmon);
+  transition: right 0.35s var(--ease-standard);
+}
+
+.navLink:hover::after {
+  right: 0;
+}
+
+.toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--pg-line);
+  background: transparent;
+  color: var(--pg-ink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  transition: background 0.3s, transform 0.4s;
+}
+
+.toggle:hover {
+  background: color-mix(in srgb, var(--pg-salmon) 14%, transparent);
+  transform: rotate(-18deg);
+}
+
+@media (max-width: 640px) {
+  .navLinks {
+    gap: 14px;
+  }
+
+  .navLink {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 430px) {
+  .navLinks {
+    gap: 10px;
+  }
+
+  .navLink {
+    font-size: 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .toggle {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navLinks {
+    gap: 8px;
+  }
+
+  .navLink {
+    font-size: 9.5px;
+    letter-spacing: 0;
+  }
+}

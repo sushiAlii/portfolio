@@ -1,0 +1,98 @@
+/* Local copy: CSS Modules scopes/hashes animation-name references inside
+   this file, so the globals.css version wouldn't resolve here. */
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.section {
+  padding: var(--section-pad-y) var(--section-pad-x);
+}
+
+.inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
+
+.portraitWrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  justify-self: start;
+}
+
+.ringOuter {
+  position: absolute;
+  width: 288px;
+  height: 288px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--pg-line);
+  animation: spinSlow 34s linear infinite;
+}
+
+.ringInner {
+  position: absolute;
+  width: 246px;
+  height: 246px;
+  border-radius: var(--radius-pill);
+  border: 1px dashed color-mix(in srgb, var(--pg-salmon) 45%, transparent);
+  animation: spinSlow 52s linear infinite reverse;
+}
+
+.portrait {
+  width: 206px;
+  height: 206px;
+  border-radius: var(--radius-pill);
+  object-fit: cover;
+  border: 5px solid var(--pg-card);
+}
+
+.p1 {
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.7;
+  color: var(--pg-soft);
+  max-width: 640px;
+}
+
+.p2 {
+  /* matches the Organic design system's default <p> bottom margin
+     (--space-3, 13.2px), which the prototype relies on implicitly */
+  margin-top: 13.2px;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.75;
+  color: var(--pg-soft);
+  max-width: 640px;
+}
+
+.sideDishes {
+  margin-top: 34px;
+}
+
+.sideDishesLabel {
+  font-size: 11.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pg-faint);
+  margin-bottom: 14px;
+}
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
