@@ -30,14 +30,15 @@ export default function Hero() {
           </div>
           <div className={styles.alias}>
             <span className={styles.aliasText}>
-              also known as <span className={styles.aliasName}>sushi</span>
+              &lt;<span className={styles.aliasName}>sushi-ali</span> /&gt;
             </span>
             <span className={styles.caret} />
           </div>
           <p className={styles.lede}>
-            Six years of building things end to end — travel platforms, iGaming, web3, and now
-            bleeding-edge R&amp;D at HCL Software. On the side I build and maintain{" "}
-            <strong>Torogan</strong>, a rental platform for the Philippines.
+            Six years of building things end to end with experience working on
+            travel platforms, iGaming, web3, and now bleeding-edge R&amp;D at
+            HCL Software. On the side I build and maintain{" "}
+            <strong>Torogan</strong>, a simple rental platform.
           </p>
           <div className={styles.ctaRow}>
             <Cta href="#work" variant="primary">

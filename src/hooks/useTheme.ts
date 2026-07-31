@@ -10,7 +10,7 @@ export type ThemeMode = "light" | "dark";
 // actually chose in an effect — that one-time correction happens before the
 // user can perceive it, without triggering a hydration mismatch.
 export function useTheme() {
-  const [mode, setMode] = useState<ThemeMode>("light");
+  const [mode, setMode] = useState<ThemeMode>("dark");
 
   useEffect(() => {
     const current = document.documentElement.getAttribute("data-mode");

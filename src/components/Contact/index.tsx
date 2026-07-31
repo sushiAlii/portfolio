@@ -20,8 +20,9 @@ export default function Contact() {
           The counter&apos;s always open
         </h2>
         <p data-rv data-d=".16" className={styles.body}>
-          Got something you want built, or just want to talk shop about Rust, Go, or where to eat
-          in Makati? Pull up a stool — I answer every message.
+          Got something you want built, or just want to talk shop about software
+          or where to eat and play badminton in Makati? Pull up a stool — I
+          answer every message.
         </p>
         <div data-rv data-d=".24" className={styles.ctaRow}>
           <Cta href={`mailto:${email}`} variant="primary">

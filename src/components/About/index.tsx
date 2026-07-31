@@ -7,11 +7,9 @@ const sideDishes = [
   "Coding",
   "Coffee",
   "Swimming",
-  "Photography",
   "Badminton",
   "Gaming",
   "Music",
-  "Travel",
 ];
 
 export default function About() {
@@ -33,15 +31,18 @@ export default function About() {
           </div>
           <div>
             <p data-rv data-d=".15" className={styles.p1}>
-              I&apos;m a full-stack developer who likes the whole plate — the API, the schema, the
-              interaction, the pixel. Most of my work is turning tangled problems into interfaces
-              that feel obvious.
+              I&apos;m a full-stack developer who likes the whole plate — the
+              API, the schema, the interaction, the pixel. Most of my work is
+              turning tangled problems into interfaces that feel obvious.
             </p>
+
             <p data-rv data-d=".22" className={styles.p2}>
-              Right now that means experimental R&amp;D work in Rust and Dioxus by day, and
-              keeping Torogan running by night. Outside the editor I&apos;ve been swimming,
-              shooting photos, and losing at badminton.
+              Right now that means experimental R&amp;D work for HCL Software by
+              day, and keeping Torogan running by night. Outside the editor
+              I&apos;ve been swimming, grinding at Valorant, and losing at
+              badminton.
             </p>
+
             <div data-rv data-d=".3" className={styles.sideDishes}>
               <div className={styles.sideDishesLabel}>Side dishes</div>
               <div className={styles.pillRow}>
