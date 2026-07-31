@@ -35,6 +35,16 @@ export interface BeltProject {
 export const beltProjects: BeltProject[] = [
   {
     id: 1,
+    name: "JHL Interiors",
+    category: "Homepage Website",
+    pillAccent: "salmon",
+    width: 280,
+    description: "Homepage Website for JHL Interiors Studio.",
+    technologies: ["Next.js", "Typescript"],
+    link: "https://jhl-interiors.vercel.app/",
+  },
+  {
+    id: 2,
     name: "sushi-commit-js",
     category: "CLI",
     pillAccent: "sage",
@@ -45,7 +55,7 @@ export const beltProjects: BeltProject[] = [
     link: "https://github.com/sushiAlii/sushi-commit-js",
   },
   {
-    id: 2,
+    id: 3,
     name: "Salsila",
     category: "Backend",
     pillAccent: "salmon",
@@ -56,7 +66,7 @@ export const beltProjects: BeltProject[] = [
     link: "https://github.com/sushiAlii/salsila-backend",
   },
   {
-    id: 3,
+    id: 4,
     name: "Blackscoop IMS",
     category: "Full stack",
     pillAccent: "sage",
@@ -67,7 +77,7 @@ export const beltProjects: BeltProject[] = [
     link: "https://www.blackscoopalssaguiaran.com/",
   },
   {
-    id: 4,
+    id: 5,
     name: "Axiefy",
     category: "Hackathon",
     pillAccent: "salmon",
@@ -78,7 +88,7 @@ export const beltProjects: BeltProject[] = [
     link: "https://axiefy.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     name: "Wave Portal",
     category: "Blockchain",
     pillAccent: "sage",
