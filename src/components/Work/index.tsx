@@ -9,7 +9,7 @@ export default function Work() {
       <div className={styles.inner}>
         <SectionHeader
           kicker="03"
-          title="Today's special"
+          title="What's cooking"
           sub="The one I'm still cooking."
           subMarginBottom={36}
         />
