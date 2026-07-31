@@ -1,41 +1,167 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --secondary: #666666;
-  --border: #e0e0e0;
+  /* ground */
+  --pg-bg: #f5ead8;
+  --pg-bg2: #fdf6ea;
+  --pg-ink: #201e1d;
+  --pg-soft: rgba(32, 30, 29, 0.68);
+  --pg-faint: rgba(32, 30, 29, 0.45);
+  --pg-line: rgba(32, 30, 29, 0.12);
+  --pg-card: #fbf6ee;
+  --pg-glass: rgba(245, 234, 216, 0.82);
+
+  /* accents — identical in both modes */
+  --pg-salmon: #f0925a;
+  --pg-sage: #8fa073;
+  --pg-nori: #2e2b25;
+  --pg-rice: #f9f4ed;
+
+  /* accent for body-sized accent text — --pg-salmon fails contrast at paragraph sizes */
+  --pg-deep: #8c491a;
+
+  /* conveyor belt */
+  --pg-belt1: #c9bda6;
+  --pg-belt2: #a89b83;
+
+  /* motion */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.3, 1);
+  --ease-nori: cubic-bezier(0.7, 0, 0.2, 1);
+
+  /* shape */
+  --radius-pill: 999px;
+  --radius-card: 28px;
+  --radius-image: 18px;
+  --radius-plate: 22px 22px 6px 6px;
+
+  /* elevation */
+  --shadow-plate-rest: 0 6px 18px color-mix(in srgb, #2e2b25 10%, transparent);
+  --shadow-plate-hover: 0 18px 34px color-mix(in srgb, #2e2b25 18%, transparent);
+  --shadow-cta-hover: 0 10px 24px color-mix(in srgb, var(--pg-salmon) 40%, transparent);
+
+  /* layout */
+  --section-pad-y: clamp(70px, 10vh, 120px);
+  --section-pad-x: clamp(20px, 5vw, 64px);
+  --content-max: 1180px;
+  --nav-height: 64px;
+}
+
+html[data-mode="dark"] {
+  --pg-bg: #181716;
+  --pg-bg2: #211e1c;
+  --pg-ink: #f9f4ed;
+  --pg-soft: rgba(245, 234, 216, 0.66);
+  --pg-faint: rgba(245, 234, 216, 0.42);
+  --pg-line: rgba(245, 234, 216, 0.16);
+  --pg-card: #231f1d;
+  --pg-deep: #f6a06b;
+  --pg-belt1: #3b352d;
+  --pg-belt2: #2a251f;
+  --pg-glass: rgba(24, 23, 22, 0.82);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: var(--background);
+}
+
+html,
+body {
+  background: var(--pg-bg);
+  color: var(--pg-ink);
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--pg-ink);
   margin: 0;
 }
 
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
 a {
-  color: inherit;
+  color: var(--pg-deep);
   text-decoration: none;
 }
 
-html {
-  background: #ffffff;
-  color-scheme: light;
+a:hover {
+  color: var(--pg-salmon);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--pg-salmon) 34%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--pg-salmon);
+  outline-offset: 2px;
+}
+
+.washed {
+  filter: saturate(0.6) contrast(0.85) brightness(1.1) opacity(0.94);
+}
+
+/* revealed by useScrollReveal; data attribute, not a class, so it survives
+   CSS Modules hashing when queried from JS */
+[data-rv] {
+  opacity: 0;
+}
+
+/* riseIn stays global: useScrollReveal.ts sets it via inline JS style
+   (el.style.animation = 'riseIn ...'), which bypasses CSS Modules scoping
+   and needs the real, unscoped name. Every other keyframe below was moved
+   into the .module.css file(s) that use it — CSS Modules (Turbopack in dev,
+   webpack in build) scopes/hashes `animation-name` references inside module
+   files, so a keyframe only defined here would never resolve for a module
+   consumer; the module needs its own local copy so both sides hash the
+   same way. See Hero/Hero.module.css, About/About.module.css,
+   Work/Work.module.css, Work/Belt.module.css, Contact/Contact.module.css. */
+@keyframes riseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.08s !important;
+  }
+
+  [data-rv] {
+    opacity: 1 !important;
+  }
 }
