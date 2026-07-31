@@ -21,37 +21,37 @@ export const experiences: Experience[] = [
     company: Company.HCL_SOFTWARE,
     logo: "/experiences/hcl-logo.jpeg",
     position: "Senior Software Engineer",
-    tenure: "Jan 2025 - Present",
+    tenure: "Jan 2025 — Present",
     description:
-      "As part of Research and Development Team, I helped in building experimental bleeding-edge application and technologies.",
-    technologies: ["Dioxus", "Lit", "Rust", "Javascript"],
+      "Part of the R&D team building experimental, bleeding-edge applications and technologies.",
+    technologies: ["Rust", "Dioxus", "Lit", "JavaScript"],
   },
   {
     company: Company.ALT_RESEARCH,
     logo: "/experiences/alt-research.jpg",
     position: "Full Stack Developer",
-    tenure: "Jan 2025 - Nov 2025",
+    tenure: "Jan 2025 — Nov 2025",
     description:
-      "Managed and maintained various web3 projects especially their rollup wizard application which is used by their clients to create and manage their own rollups. One of the pioneering team in building Rumour, a decentralized social cryptotrading platform for web3.",
-    technologies: ["React", "Typescript", "Blockchain", "Go"],
+      "Maintained web3 products including the rollup wizard clients use to spin up and manage their own rollups, and helped pioneer Rumour, a decentralised social cryptotrading platform.",
+    technologies: ["React", "TypeScript", "Go", "Blockchain"],
   },
   {
     company: Company.BALLYS,
     logo: "/experiences/ballys-interactive.jpg",
     position: "Frontend Engineer",
-    tenure: "Jul 2024 - Jan 2025",
+    tenure: "Jul 2024 — Jan 2025",
     description:
-      "Built highly responsive and robust UI components as part of the iGaming team, leveraging micro-frontend architecture across multiple ventures inside Bally's ecosystem.",
-    technologies: ["React", "Typescript", "Micro-frontend"],
+      "Built responsive, resilient UI components for the iGaming team across a micro-frontend architecture spanning several ventures in the Bally's ecosystem.",
+    technologies: ["React", "TypeScript", "Micro-frontend"],
   },
   {
     company: Company.RTX,
     logo: "/experiences/rakuten-travel-xchange.jpg",
     position: "Full Stack Developer",
-    tenure: "Dec 2021 - Jul 2024",
+    tenure: "Dec 2021 — Jul 2024",
     description:
-      "Worked across various travel booking applications, ensuring a seamless user experience by building responsive UI components, optimizing for SEO, and enhancing performance. Developed fully tested RESTful APIs for backend services.",
-    technologies: ["Vue", "Express", "Javascript", "Cypress", "Playwright"],
+      "Shipped travel-booking experiences end to end — responsive UI, SEO and performance work on the front, fully tested REST services behind.",
+    technologies: ["Vue", "Express", "Cypress", "Playwright"],
   },
 ];
 
@@ -69,8 +69,8 @@ export const technologiesLinks = {
   Playwright: "https://playwright.dev/",
 
   //  Programming Languages
-  Javascript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  Typescript: "https://www.typescriptlang.org/",
+  JavaScript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  TypeScript: "https://www.typescriptlang.org/",
   Rust: "https://rust-lang.org/",
   Go: "https://go.dev/",
 

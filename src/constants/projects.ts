@@ -1,87 +1,91 @@
-export interface Project {
-  id: number;
+export interface FeaturedProject {
   name: string;
+  kicker: string;
   description: string;
-  githubLink: string;
-  liveLink?: string;
-  image: string;
   technologies: string[];
-  category: string;
-  featured?: boolean;
+  image: string;
+  liveLink: string;
+  liveLabel: string;
+  githubLink: string;
 }
 
-export const projects: Project[] = [
+export const featuredProject: FeaturedProject = {
+  name: "Torogan",
+  kicker: "Actively maintained",
+  description:
+    "A rental-listing platform for the Philippines. Browse verified rentals and talk to landlords directly — no middlemen, no finder's fees. I design, build and run the whole thing.",
+  technologies: ["Next.js", "Go", "Gin", "PostgreSQL", "AWS"],
+  image: "/torogan.png",
+  liveLink: "https://www.torogan.com",
+  liveLabel: "Visit torogan.com ↗",
+  githubLink: "https://github.com/sushiAlii/torogan-fe",
+};
+
+export interface BeltProject {
+  id: number;
+  name: string;
+  category: string;
+  pillAccent: "sage" | "salmon";
+  width: 280 | 300;
+  description: string;
+  technologies: string[];
+  link: string;
+}
+
+export const beltProjects: BeltProject[] = [
   {
     id: 1,
-    name: "Torogan",
+    name: "sushi-commit-js",
+    category: "CLI",
+    pillAccent: "sage",
+    width: 280,
     description:
-      "A rental-listing platform for the Philippines — browse verified rentals and connect directly with landlords, no middlemen.",
-    githubLink: "https://github.com/sushiAlii/torogan-fe",
-    liveLink: "https://www.torogan.com",
-    image: "/torogan.png",
-    technologies: ["Next.js", "Go", "Gin", "PostgreSQL", "AWS"],
-    category: "Full Stack",
-    featured: true,
+      "AI-written conventional commits from your git diff. Bun + Claude Haiku, zero overhead.",
+    technologies: ["TypeScript", "Bun"],
+    link: "https://github.com/sushiAlii/sushi-commit-js",
   },
   {
     id: 2,
-    name: "sushi-commit-js",
+    name: "Salsila",
+    category: "Backend",
+    pillAccent: "salmon",
+    width: 280,
     description:
-      "A blazingly fast, zero-overhead, AI-powered CLI utility that inspects your local git diff alterations and automatically crafts precise, structured Conventional Commits. Powered by the lightning-fast efficiency of Bun and Claude Haiku.",
-    githubLink: "https://github.com/sushiAlii/sushi-commit-js",
-    liveLink: "",
-    image: "",
-    technologies: ["Typescript"],
-    category: "CLI",
-    featured: false,
+      "From سلسلة — chain. Build and connect genealogical trees. Backend live, frontend pending.",
+    technologies: ["Go", "PostgreSQL"],
+    link: "https://github.com/sushiAlii/salsila-backend",
   },
   {
     id: 3,
-    name: "Salsila",
+    name: "Blackscoop IMS",
+    category: "Full stack",
+    pillAccent: "sage",
+    width: 300,
     description:
-      "Salsila derived from Arabic term 'سلسلة' which means chain, link, or connection. It is a web application that allows users to build and connect geneological trees. Currently, frontend is still pending to be implemented.",
-    githubLink: "https://github.com/sushiAlii/salsila-backend",
-    liveLink: "",
-    image: "",
-    technologies: ["Golang", "PostgreSQL"],
-    category: "Backend",
-    featured: false,
+      "Inventory management for the Saguiaran branch — view, add and update stock.",
+    technologies: ["Vue", "Supabase"],
+    link: "https://www.blackscoopalssaguiaran.com/",
   },
   {
     id: 4,
-    name: "Blackscoop Inventory Management System",
+    name: "Axiefy",
+    category: "Hackathon",
+    pillAccent: "salmon",
+    width: 280,
     description:
-      "A web application for managing inventory for Blackscoop (Saguiaran branch). It allows the users to view the inventory, add items, and update items.",
-    githubLink: "https://github.com/sushiAlii/sales_inventory",
-    liveLink: "https://www.blackscoopalssaguiaran.com/",
-    image: "/blackscoop.png",
-    technologies: ["Vue", "Supabase", "PostgreSQL"],
-    category: "Full Stack",
-    featured: true,
+      "A Supabase hackathon build with Carlo — Axie Infinity managers tracking scholar earnings.",
+    technologies: ["Nuxt", "Supabase"],
+    link: "https://axiefy.vercel.app/",
   },
   {
     id: 5,
-    name: "Axiefy",
-    description:
-      "A hackathon project from Supabase, in collaboration with my friend, Carlo. It is a web application that allows Axie Infinity managers to manage their scholars' earnings.",
-    githubLink: "https://github.com/carlomigueldy/axiefy",
-    liveLink: "https://axiefy.vercel.app/",
-    image:
-      "https://user-images.githubusercontent.com/45052332/136742862-d1064d1a-cdce-440a-b5d2-03e7214fe50c.png",
-    technologies: ["Nuxt", "Vue", "Supabase", "PostgreSQL"],
-    category: "Full Stack",
-    featured: true,
-  },
-  {
-    id: 6,
     name: "Wave Portal",
-    description:
-      "A simple project creating and implementing a wave smart contract inside Rinkeby Testnet. Users can also leave a small message upon triggering wave.",
-    githubLink: "https://github.com/sushiAlii/wave-portal",
-    liveLink: "https://sushi-wave.vercel.app/",
-    image: "/wave.png",
-    technologies: ["Solidity", "React", "Hardhat", "ethers.js"],
     category: "Blockchain",
-    featured: false,
+    pillAccent: "sage",
+    width: 280,
+    description:
+      "A wave smart contract on Rinkeby — leave a message when you wave.",
+    technologies: ["Solidity", "ethers.js"],
+    link: "https://sushi-wave.vercel.app/",
   },
 ];
